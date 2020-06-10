@@ -1,6 +1,6 @@
-# 0906
+# Quwi app
 
-> Nuxt.js project
+> Nuxt.js Quwi app
 
 ## Build Setup
 

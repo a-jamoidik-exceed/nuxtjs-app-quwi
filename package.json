@@ -1,7 +1,7 @@
 {
-  "name": "0906",
+  "name": "quwi-app",
   "version": "1.0.0",
-  "description": "Nuxt.js project",
+  "description": "Quwi project",
   "author": "a-jamoidik-exceed <a.jamoidik.exceedteam@gmail.com>",
   "private": true,
   "scripts": {
