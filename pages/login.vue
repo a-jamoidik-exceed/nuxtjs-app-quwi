@@ -55,7 +55,7 @@
 				'authenticationError'
       ])
 	  },
-	  watch:{
+	  watch: {
       authenticated(status) {
         if (status) {
           this.$nuxt.$router.push({ path: '/' })

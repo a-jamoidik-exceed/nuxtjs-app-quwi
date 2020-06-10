@@ -7,7 +7,8 @@
 					 <div class="project-parameters-item-form">
 						 <input
 							 v-model="name"
-							 class="project-parameters-item-form__field"
+							 @keydown.enter="onUpdate"
+							 :class="`project-parameters-item-form__field${nameError ? ' project-parameters-item-form__field_error' : ''}`"
 							 type="text"
 						 />
 						 <button
@@ -37,13 +38,24 @@
 	    return {
 	      id: 0,
 		    name: '',
+		    nameError: false,
 		    updatingProcess: false,
 		    isUpdated: false
 	    }
 		},
+		watch: {
+			name() {
+				this.nameError = false;
+			}
+		},
 		methods: {
+			validateName() {
+				return !!this.name.length;
+			},
 	    onUpdate() {
-	    	this.updatingProcess = true;
+				if (!this.validateName()) return this.nameError = true;
+				
+				this.updatingProcess = true;
 	      this.$quwiAPI.updateProject(this.id, { name: this.name })
 		    .then(response => {
 		    	if (!response) {
@@ -121,6 +133,10 @@
 						 border: 1px solid #D2D2D2;
 						 border-radius: 3px;
 						 outline: none;
+						 
+						 &_error {
+							 box-shadow: red 0 0 2px;
+						 }
 					 }
 					 
 					 &__submit {
