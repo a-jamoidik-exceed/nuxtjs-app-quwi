@@ -1,0 +1,25 @@
+.button {
+	background-color: #39547B;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid #C6C6C6;
+	padding: 10px 50px;
+	color: #FFFFFF;
+	outline: none;
+	cursor: pointer;
+	
+	&_submit {
+		text-shadow: #000000 2px 2px 2px;
+		background-color: #39547B;
+		color: #FFFFFF;
+	}
+	
+	&_normal {
+		font-weight: 800;
+		background-color: #D6D6D6;
+		color: #000000;
+	}
+}
