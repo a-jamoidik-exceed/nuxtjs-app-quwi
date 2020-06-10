@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import NavigationPanel from '../components/NavigationPanel';
+  import NavigationPanel from '~/components/NavigationPanel';
   
   export default {
     components: {

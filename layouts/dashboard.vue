@@ -6,7 +6,7 @@
 </template>
 
 <script>
-	import DashboardHeader from '../components/DashboardHeader';
+	import DashboardHeader from '~/components/DashboardHeader';
 
 	export default {
 	  components: {
